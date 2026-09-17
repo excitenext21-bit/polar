@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="polarBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#009be3" />
+      <stop offset="100%" stopColor="#0077b0" />
+    </linearGradient>
+  </defs>
+  <!-- Background badge in official Polar Air logo blue -->
+  <rect width="512" height="512" rx="128" fill="url(#polarBlueGrad)" />
+  <!-- Inner subtle ambient glow ring -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="8" />
+  <!-- Bold Letter P in Crisp White -->
+  <text 
+    x="50%" 
+    y="52%" 
+    text-anchor="middle" 
+    dominant-baseline="central" 
+    fill="#ffffff" 
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'General Sans', sans-serif" 
+    font-size="330" 
+    font-weight="900"
+    letter-spacing="-0.02em"
+  >P</text>
+</svg>

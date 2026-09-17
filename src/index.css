@@ -1,0 +1,749 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Google Sans'), local('Product Sans'), url('https://fonts.cdnfonts.com/s/14955/ProductSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Google Sans Medium'), local('Product Sans Medium'), url('https://fonts.cdnfonts.com/s/14955/ProductSans-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Google Sans Bold'), local('Product Sans Bold'), url('https://fonts.cdnfonts.com/s/14955/ProductSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Google Sans Black'), local('Product Sans Black'), url('https://fonts.cdnfonts.com/s/14955/ProductSans-Black.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'google general sans';
+  font-style: normal;
+  font-weight: 100 900;
+  src: local('General Sans'), local('Google Sans'), url('https://cdn.fontshare.com/wf/MFQT7HFGCR2L5ULQTW6YXYZXXHMPKLJ3/YWQ244D6TACUX5JBKATPOW5I5MGJ3G73/7YY3ZAAE3TRV2LANYOLXNHTPHLXVWTKH.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Google General Sans';
+  font-style: normal;
+  font-weight: 100 900;
+  src: local('General Sans'), local('Google Sans'), url('https://cdn.fontshare.com/wf/MFQT7HFGCR2L5ULQTW6YXYZXXHMPKLJ3/YWQ244D6TACUX5JBKATPOW5I5MGJ3G73/7YY3ZAAE3TRV2LANYOLXNHTPHLXVWTKH.woff2') format('woff2');
+}
+
+@theme {
+  --font-sans: 'General Sans', 'Google Sans', 'google general sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-general: 'General Sans', 'Google Sans', 'google general sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root, html, body {
+  font-family: 'General Sans', 'Google Sans', 'google general sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+h1, h2 {
+  font-family: 'General Sans', sans-serif !important;
+  font-weight: 300 !important;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'General Sans', 'Google Sans', 'google general sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+button, input, select, textarea, p, span, a, li {
+  font-family: 'General Sans', 'Google Sans', 'google general sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 26s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes linePatternDrift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.hero-line-pattern {
+  background-image: 
+    repeating-linear-gradient(0deg, rgba(56, 189, 248, 0.05) 0px, rgba(56, 189, 248, 0.05) 1px, transparent 1px, transparent 50px),
+    repeating-linear-gradient(90deg, rgba(56, 189, 248, 0.05) 0px, rgba(56, 189, 248, 0.05) 1px, transparent 1px, transparent 50px);
+  background-size: 50px 50px;
+  animation: linePatternDrift 20s linear infinite;
+  will-change: background-position;
+}
+
+@keyframes waveFlow1 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-24px) translateY(8px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes waveFlow2 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(28px) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.animate-wave-1 {
+  animation: waveFlow1 14s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wave-2 {
+  animation: waveFlow2 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ==========================================================================
+   Home Page Onload Smooth Animations
+   ========================================================================== */
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes headerSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wordReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroSubReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-page-fade-in {
+  animation: pageFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-header-slide-down {
+  animation: headerSlideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-word-reveal {
+  animation: wordReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform, filter;
+}
+
+.animate-hero-sub-reveal {
+  animation: heroSubReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: opacity, transform, filter;
+}
+
+/* ==========================================================================
+   Tools & Standards Orbit System Animations
+   ========================================================================== */
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSpinReverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spokeFlow {
+  0% {
+    stroke-dashoffset: 24;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes radarPulseWave {
+  0% {
+    transform: scale(0.65);
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.65);
+    opacity: 0;
+  }
+}
+
+@keyframes hubBreathing {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(71, 216, 71, 0.25), 0 20px 40px -15px rgba(4, 22, 36, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(71, 216, 71, 0.5), 0 25px 50px -10px rgba(4, 22, 36, 0.7);
+    transform: scale(1.025);
+  }
+}
+
+@keyframes zapPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(71, 216, 71, 0.6));
+  }
+  50% {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 12px rgba(71, 216, 71, 1));
+  }
+}
+
+@keyframes textShimmerSweep {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-orbit {
+  animation: orbitSpin 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-orbit-reverse {
+  animation: orbitSpinReverse 28s linear infinite;
+  will-change: transform;
+}
+
+.animate-orbit-counter-slow {
+  animation: orbitSpinReverse 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-spoke-flow {
+  animation: spokeFlow 1.8s linear infinite;
+}
+
+.animate-radar-1 {
+  animation: radarPulseWave 4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.animate-radar-2 {
+  animation: radarPulseWave 4s cubic-bezier(0.2, 0.8, 0.2, 1) 2s infinite;
+}
+
+.animate-hub-glow {
+  animation: hubBreathing 4s ease-in-out infinite;
+}
+
+.animate-zap-glow {
+  animation: zapPulse 2.4s ease-in-out infinite;
+}
+
+.animate-text-shimmer {
+  background-size: 200% auto;
+  animation: textShimmerSweep 4.5s linear infinite;
+}
+
+/* Pause animation only when directly hovering on a satellite node, keeping rotation continuous otherwise */
+.orbit-system:has(.group\/node:hover) .animate-orbit,
+.orbit-system:has(.group\/node:hover) .animate-orbit-reverse,
+.orbit-system:has(.group\/node:hover) .animate-spoke-flow {
+  animation-play-state: paused;
+}
+
+/* Ensure hovered brand tab nodes and their hover tooltips stay strictly on top of all other tabs */
+.orbit-system .group\/node:hover,
+.orbit-system .group\/node:focus-within {
+  z-index: 100 !important;
+}
+
+.orbit-system .group\/node:hover > div {
+  z-index: 100 !important;
+}
+
+/* ==========================================================================
+   Process Section Modern Premium Smooth Entrance & Aura Animations
+   ========================================================================== */
+@keyframes processSmoothEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(36px) scale(0.90);
+    filter: blur(8px);
+  }
+  65% {
+    opacity: 0.95;
+    transform: translateY(-4px) scale(1.02);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.animate-process-entrance {
+  opacity: 0;
+  animation: processSmoothEntrance 0.88s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+}
+
+@keyframes activeAuraPulse {
+  0%, 100% {
+    box-shadow: 0 0 35px rgba(71, 216, 71, 0.22), 0 16px 36px rgba(0, 0, 0, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 55px rgba(71, 216, 71, 0.42), 0 22px 48px rgba(0, 0, 0, 0.65);
+  }
+}
+
+.animate-active-aura {
+  animation: activeAuraPulse 3.5s ease-in-out infinite;
+}
+
+@keyframes smoothDetailFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-step-detail {
+  animation: smoothDetailFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   3D Flip Card Effect (Image 1 & Image 2 Reference)
+   ========================================================================== */
+.flip-card-perspective {
+  perspective: 1200px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-perspective:hover .flip-card-inner,
+.flip-card-perspective:focus-within .flip-card-inner,
+.flip-card-perspective.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  transform: translateZ(0);
+}
+
+.flip-card-front {
+  transform: rotateY(0deg) translateZ(0);
+  z-index: 2;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg) translateZ(0);
+  z-index: 1;
+}
+
+/* ==========================================================================
+   Testimonial Showcase Smooth Animations (Reference Layout)
+   ========================================================================== */
+@keyframes testimonialSlideFade {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-testimonial-text {
+  animation: testimonialSlideFade 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes testimonialImagePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.96);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+
+.animate-testimonial-image {
+  animation: testimonialImagePop 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   Hero Modern Minimal Word-by-Word Text Reveal Animation (on loading)
+   ========================================================================== */
+
+@keyframes heroWordReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.animate-word-reveal {
+  opacity: 0;
+  animation: heroWordReveal 0.88s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity, filter;
+  display: inline-block;
+}
+
+@keyframes heroSubFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.animate-hero-sub-reveal {
+  opacity: 0;
+  animation: heroSubFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.95s forwards;
+  will-change: transform, opacity, filter;
+}
+
+/* ==========================================================================
+   Back to Top Floating Button Continuous Looping Ripple Waves
+   ========================================================================== */
+
+@keyframes ripplePulseLoop {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.22;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.ripple-wave {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background-color: #2993fb;
+  pointer-events: none;
+  animation: ripplePulseLoop 2.1s cubic-bezier(0.1, 0.4, 0.7, 1) infinite;
+  will-change: transform, opacity;
+}
+
+.ripple-wave-2 {
+  animation-delay: 0.7s;
+}
+
+.ripple-wave-3 {
+  animation-delay: 1.4s;
+}
+
+/* ==========================================================================
+   Global Scrollbar Hiding Utilities
+   ========================================================================== */
+
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* ==========================================================================
+   Fade In & Upward Bouncing Animation for CTA Headline
+   ========================================================================== */
+
+@keyframes bounceFromUpward {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -65px, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(0, 16px, 0);
+  }
+  70% {
+    transform: translate3d(0, -8px, 0);
+  }
+  85% {
+    transform: translate3d(0, 4px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-bounce-from-upward {
+  animation: bounceFromUpward 1.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform, opacity;
+}
+
+/* ==========================================================================
+   Our Philosophy Central Circular Hub Animations
+   ========================================================================== */
+
+@keyframes medallionFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pedestalShadowBreathe {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(-50%) scale(0.88);
+    opacity: 0.22;
+  }
+}
+
+@keyframes orbitSpinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSpinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes cyanRingPulse {
+  0%, 100% {
+    border-color: rgba(0, 136, 198, 0.75);
+    box-shadow: inset 0 0 14px rgba(0, 136, 198, 0.25), 0 0 10px rgba(0, 136, 198, 0.15);
+  }
+  50% {
+    border-color: rgba(56, 189, 248, 1);
+    box-shadow: inset 0 0 24px rgba(0, 136, 198, 0.55), 0 0 20px rgba(56, 189, 248, 0.45);
+  }
+}
+
+@keyframes dashFlowStream {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+@keyframes arcGlowSweep {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(0, 136, 198, 0.35));
+    opacity: 0.92;
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(56, 189, 248, 0.85));
+    opacity: 1;
+  }
+}
+
+.animate-medallion-float {
+  animation: medallionFloat 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-pedestal-shadow {
+  animation: pedestalShadowBreathe 5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-orbit-spin {
+  animation: orbitSpinSlow 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-orbit-spin-reverse {
+  animation: orbitSpinReverse 36s linear infinite;
+  will-change: transform;
+}
+
+.animate-cyan-ring-pulse {
+  animation: cyanRingPulse 3.5s ease-in-out infinite;
+}
+
+.animate-dash-flow {
+  animation: dashFlowStream 2.5s linear infinite;
+}
+
+.animate-arc-glow {
+  animation: arcGlowSweep 3.5s ease-in-out infinite;
+}
+
+@keyframes radarSheenSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sheen {
+  animation: radarSheenSweep 9s linear infinite;
+  will-change: transform;
+}
+
+@keyframes outerArcGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(0, 136, 198, 0.5)) drop-shadow(0 0 14px rgba(56, 189, 248, 0.35));
+    opacity: 0.94;
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.95)) drop-shadow(0 0 30px rgba(0, 196, 204, 0.65));
+    opacity: 1;
+  }
+}
+
+.animate-outer-arc-pulse {
+  animation: outerArcGlowPulse 3s ease-in-out infinite;
+}
+
+@keyframes ctaBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-9px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-cta-bounce {
+  animation: ctaBounce 2s ease-in-out infinite;
+  will-change: transform;
+}

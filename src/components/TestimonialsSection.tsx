@@ -103,12 +103,13 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
 
   return (
     <section
-      id="reviews"
+      id="faqs"
       className="py-14 sm:py-18 lg:py-24 bg-[#f8fafc] text-slate-900 border-t border-slate-200/80 relative overflow-hidden select-none"
       style={{ fontFamily: "'General Sans', sans-serif" }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
+      <div id="reviews" className="sr-only" aria-hidden="true" />
       {/* Subtle ambient lighting glows in brand colors */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-sky-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-50/50 rounded-full blur-3xl pointer-events-none -z-10" />

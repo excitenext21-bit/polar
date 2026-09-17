@@ -36,6 +36,7 @@ export default function App() {
         'services',
         'tools',
         'process',
+        'faqs',
         'reviews',
         'contact',
       ];

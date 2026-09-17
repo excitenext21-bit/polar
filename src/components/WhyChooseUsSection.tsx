@@ -194,9 +194,8 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onOpenBo
                 {/* 3. RIGHT IMAGE: Tall portrait card with rounded arched top */}
                 <div className="group relative rounded-t-[70px] sm:rounded-t-[90px] rounded-b-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-2xl h-[340px] sm:h-[420px] lg:h-[460px] w-full">
                   <img
-                    src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80"
-                    alt="Pristine modern kitchen with pure indoor air circulation"
-                    referrerPolicy="no-referrer"
+                    src="/assets/why-choose-us-office.png"
+                    alt="Modern high-efficiency commercial office workspace with precision climate control"
                     className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
                 </div>

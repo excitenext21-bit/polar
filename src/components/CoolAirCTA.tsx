@@ -5,6 +5,17 @@ interface CoolAirCTAProps {
   onOpenBooking?: () => void;
 }
 
+const HEADLINE_WORDS = [
+  'Book',
+  'your',
+  'appointment',
+  'today',
+  'and',
+  'breathe',
+  'easier',
+  'tomorrow...',
+];
+
 export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -13,7 +24,7 @@ export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
     // Check if element is already within viewport on initial load
     if (sectionRef.current) {
       const rect = sectionRef.current.getBoundingClientRect();
-      if (rect.top < window.innerHeight + 50 && rect.bottom > 0) {
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
         setIsInView(true);
         return;
       }
@@ -26,7 +37,7 @@ export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
     );
 
     if (sectionRef.current) {
@@ -54,7 +65,7 @@ export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
       style={{ fontFamily: "'General Sans', sans-serif" }}
     >
       {/* ========================================================================= */}
-      {/* BACKGROUND IMAGE: Smiling Consultant on Phone with Lush Green Plant Wall  */}
+      {/* BACKGROUND IMAGE: Customer Support Team (Watermark removed)                */}
       {/* ========================================================================= */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img
@@ -114,30 +125,55 @@ export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
         <div className="max-w-2xl">
           
-          {/* Main Headline with Smooth Fade In Effect */}
+          {/* Main Headline with Elegant Word-by-Word Staggered Reveal */}
           <h2
-            className={`font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-white tracking-tight leading-[1.2] mb-3 text-balance transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+            className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-white tracking-tight leading-[1.2] mb-3 text-balance"
             style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300, color: '#ffffff' }}
           >
-            Book your appointment today and breathe easier tomorrow...
+            {HEADLINE_WORDS.map((word, index) => (
+              <span
+                key={index}
+                className="inline-block transition-all ease-out"
+                style={{
+                  opacity: isInView ? 1 : 0,
+                  transform: isInView ? 'translateY(0)' : 'translateY(12px)',
+                  transitionDuration: '750ms',
+                  transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+                  transitionDelay: `${index * 55}ms`,
+                  marginRight: index === HEADLINE_WORDS.length - 1 ? '0' : '0.28em',
+                }}
+              >
+                {word}
+              </span>
+            ))}
           </h2>
 
-          {/* Subtitle Description with Staggered Fade In */}
+          {/* Subtitle Description with Staggered Fade & Slide In (0.75s ease-out) */}
           <p
-            className={`text-slate-300 text-sm sm:text-base lg:text-[16px] font-light leading-relaxed max-w-lg mb-6 sm:mb-7 transition-all duration-1000 delay-150 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-              isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-            style={{ fontWeight: 300 }}
+            className="text-slate-300 text-sm sm:text-base lg:text-[16px] font-light leading-relaxed max-w-lg mb-6 sm:mb-7 transition-all ease-out"
+            style={{
+              fontWeight: 300,
+              opacity: isInView ? 1 : 0,
+              transform: isInView ? 'translateY(0)' : 'translateY(12px)',
+              transitionDuration: '750ms',
+              transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+              transitionDelay: '460ms',
+            }}
           >
             Call an air supply expert today for a quote on your new home comfort system.
           </p>
 
-          {/* ========================================================================= */}
-          {/* BOTTOM CONTROLS ROW: Sleek Hero-Style Connect Us Button with 1px Arrow     */}
-          {/* ========================================================================= */}
-          <div className="flex flex-wrap items-center">
+          {/* Bottom Controls Row: Connect Us Button with Staggered Entrance */}
+          <div
+            className="flex flex-wrap items-center transition-all ease-out"
+            style={{
+              opacity: isInView ? 1 : 0,
+              transform: isInView ? 'translateY(0)' : 'translateY(12px)',
+              transitionDuration: '750ms',
+              transitionTimingFunction: 'cubic-bezier(0.16, 1, 0.3, 1)',
+              transitionDelay: '620ms',
+            }}
+          >
             <a
               href="#contact"
               onClick={handleConnectClick}

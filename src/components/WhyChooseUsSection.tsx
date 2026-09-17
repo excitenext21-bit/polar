@@ -172,9 +172,8 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onOpenBo
                 {/* 1. TOP-LEFT IMAGE: Arched top-left corner */}
                 <div className="group relative rounded-tl-[70px] sm:rounded-tl-[90px] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-2xl aspect-[4/3] w-full">
                   <img
-                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
-                    alt="Pristine modern home with clean climate control"
-                    referrerPolicy="no-referrer"
+                    src="/assets/why-choose-us-ac.jpg"
+                    alt="Pristine modern home cooling comfort with remote climate control"
                     className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
                 </div>

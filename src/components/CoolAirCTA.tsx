@@ -59,8 +59,8 @@ export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img
           src="/assets/cta-consultant.jpg"
-          alt="PolarAir Customer Service & HVAC Consultant"
-          className="w-full h-full object-cover object-[62%_15%] sm:object-[60%_15%] lg:object-[65%_18%]"
+          alt="PolarAir Customer Service & HVAC Support Team"
+          className="w-full h-full object-cover object-[78%_25%] sm:object-[75%_25%] lg:object-[78%_28%]"
         />
 
         {/* High-Contrast Gradient Mask: Deep Solid Navy on Left Feathering to Clear on Right */}

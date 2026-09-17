@@ -39,7 +39,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
         'Held key leadership roles at Hitachi, Daikin (Business Head – VRV) & Samsung India (South Regional Head – Commercial AC). Polar Air Projects Private Limited provides tailored HVAC solutions across India, serving sectors from IT complexes, hospitals, and clean rooms to industrial plants and luxury homes. Driven by process and technological innovation, we deliver end-to-end consulting—including heat load calculations, system selection, and power/cost analysis. We approach every project uniquely to ensure maximum energy efficiency, reliability, safety, and cost optimization.',
       ctaText: 'Know More',
       badge: 'Chief Executive Officer',
-      image: '/assets/cta-consultant.jpg',
+      image: '/assets/anagha-rajguru.jpg',
     },
   ];
 

@@ -51,8 +51,9 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
   };
 
   return (
-    <section id="process" className="pt-10 lg:pt-14 pb-12 lg:pb-16 bg-[#eef2f6] text-slate-900 relative overflow-hidden border-t border-slate-200/80">
-      {/* Anchor for Leadership navigation */}
+    <section id="projects" className="pt-10 lg:pt-14 pb-12 lg:pb-16 bg-[#eef2f6] text-slate-900 relative overflow-hidden border-t border-slate-200/80">
+      {/* Anchors for navigation compatibility */}
+      <span id="process" className="sr-only" aria-hidden="true" />
       <span id="leadership" className="absolute -top-24 left-0 pointer-events-none" />
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-[#041624]/5 rounded-full blur-[160px] pointer-events-none -z-0"></div>

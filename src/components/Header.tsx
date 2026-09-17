@@ -259,13 +259,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenEstimator, 
 
 
             <a
-              href="#process"
-              onClick={(e) => handleNavClick(e, '#process')}
+              href="#projects"
+              onClick={(e) => handleNavClick(e, '#projects')}
               className={`transition-colors hover:text-white ${
-                activeSection === 'process' ? 'text-white font-semibold' : 'text-slate-200'
+                activeSection === 'projects' || activeSection === 'process' ? 'text-white font-semibold' : 'text-slate-200'
               }`}
             >
-              Process
+              Projects
             </a>
 
             <a
@@ -356,11 +356,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenEstimator, 
               </a>
 
               <a
-                href="#process"
-                onClick={(e) => handleNavClick(e, '#process')}
+                href="#projects"
+                onClick={(e) => handleNavClick(e, '#projects')}
                 className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-[#47d847]"
               >
-                Process
+                Projects
               </a>
               <a
                 href="#faqs"

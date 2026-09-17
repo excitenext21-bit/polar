@@ -35,6 +35,7 @@ export default function App() {
         'why-choose-us',
         'services',
         'tools',
+        'projects',
         'process',
         'faqs',
         'reviews',

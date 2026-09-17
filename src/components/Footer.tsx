@@ -209,11 +209,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onOpenEstimator }
                 </li>
                 <li>
                   <a
-                    href="#process"
-                    onClick={(e) => scrollToSection(e, 'process')}
+                    href="#projects"
+                    onClick={(e) => scrollToSection(e, 'projects')}
                     className="hover:text-white hover:translate-x-1 transition-all duration-200 inline-block"
                   >
-                    Leadership
+                    Projects
                   </a>
                 </li>
                 <li>

@@ -59,12 +59,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenEstimator, 
               <span>{BUSINESS_INFO.phone}</span>
             </a>
 
-            <span className="text-white/20 select-none">|</span>
+            <span className="hidden sm:inline text-white/20 select-none">|</span>
 
             <a
               href={`mailto:${BUSINESS_INFO.email}`}
               id="topbar-email-link"
-              className="group inline-flex items-center gap-1.5 sm:gap-2 hover:text-[#0088c6] transition-colors font-light tracking-wide text-xs sm:text-[13px]"
+              className="hidden sm:inline-flex group items-center gap-1.5 sm:gap-2 hover:text-[#0088c6] transition-colors font-light tracking-wide text-xs sm:text-[13px]"
               style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
             >
               <Mail className="w-3.5 h-3.5 text-[#0088c6] group-hover:text-white transition-colors shrink-0 stroke-[1]" strokeWidth={1} />
@@ -324,48 +324,47 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, onOpenEstimator, 
 
         {/* Mobile menu dropdown */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-sky-900/40 bg-[#0A1428] px-4 pt-3 pb-6 mt-3 shadow-2xl animate-in fade-in duration-150">
-            <div className="flex flex-col gap-2 mb-4 text-sm font-medium text-slate-300">
+          <div className="lg:hidden border-t border-white/10 bg-[#0A1428]/95 backdrop-blur-xl px-4 pt-3 pb-6 mt-3 shadow-2xl animate-in fade-in duration-200">
+            <div className="flex flex-col gap-1 mb-4 text-[15px] font-normal text-slate-200">
               <a
                 href="#home"
                 onClick={(e) => handleNavClick(e, '#home')}
-                className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-[#47d847]"
+                className="px-3.5 py-3 rounded-lg hover:bg-white/5 hover:text-[#0088c6] active:bg-white/10 transition-colors"
               >
                 Home
               </a>
               <a
                 href="#about-us"
                 onClick={(e) => handleNavClick(e, '#about-us')}
-                className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-[#47d847]"
+                className="px-3.5 py-3 rounded-lg hover:bg-white/5 hover:text-[#0088c6] active:bg-white/10 transition-colors"
               >
                 About Us
               </a>
               <a
                 href="#why-choose-us"
                 onClick={(e) => handleNavClick(e, '#why-choose-us')}
-                className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-[#47d847]"
+                className="px-3.5 py-3 rounded-lg hover:bg-white/5 hover:text-[#0088c6] active:bg-white/10 transition-colors"
               >
                 Why Choose Us
               </a>
               <a
                 href="#services"
                 onClick={(e) => handleNavClick(e, '#services')}
-                className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-[#47d847]"
+                className="px-3.5 py-3 rounded-lg hover:bg-white/5 hover:text-[#0088c6] active:bg-white/10 transition-colors"
               >
                 Services
               </a>
-
               <a
                 href="#projects"
                 onClick={(e) => handleNavClick(e, '#projects')}
-                className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-[#47d847]"
+                className="px-3.5 py-3 rounded-lg hover:bg-white/5 hover:text-[#0088c6] active:bg-white/10 transition-colors"
               >
                 Projects
               </a>
               <a
                 href="#faqs"
                 onClick={(e) => handleNavClick(e, '#faqs')}
-                className="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-[#0088c6]"
+                className="px-3.5 py-3 rounded-lg hover:bg-white/5 hover:text-[#0088c6] active:bg-white/10 transition-colors"
               >
                 FAQs
               </a>

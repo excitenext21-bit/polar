@@ -64,7 +64,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
         <div className="text-left max-w-6xl mx-auto mb-6 sm:mb-8">
           <h2
             className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-slate-950 tracking-tight leading-[1.18] text-left"
-            style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300 }}
+            style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
           >
             Leadership
           </h2>
@@ -81,7 +81,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
                   <button
                     key={step.id}
                     onClick={() => setActiveStepIndex(idx)}
-                    className={`relative px-6 sm:px-10 lg:px-14 py-2.5 sm:py-3 lg:py-3.5 tracking-tight transition-all select-none cursor-pointer whitespace-nowrap ${
+                    className={`relative px-3.5 xs:px-6 sm:px-10 lg:px-14 py-2 sm:py-3 lg:py-3.5 tracking-tight transition-all select-none cursor-pointer whitespace-nowrap ${
                       isActive
                         ? 'bg-gradient-to-b from-[#e8ecf2] via-[#f7f9fb] to-[#ffffff] text-slate-950 rounded-t-2xl sm:rounded-t-[22px] font-light border-t border-x border-[#cbcbcb] shadow-[0_-3px_12px_rgba(0,0,0,0.03)] after:content-[""] after:absolute after:-bottom-[1px] after:left-0 after:right-0 after:h-[3px] after:bg-white after:z-10'
                         : 'text-slate-600 hover:text-slate-950 bg-transparent font-light hover:bg-gradient-to-b hover:from-white/70 hover:to-slate-100/50 rounded-t-xl hover:z-20'
@@ -115,13 +115,13 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
                     {/* Tab Text: Name & Designation */}
                     <div className="relative z-20 flex flex-col items-center justify-center text-center">
                       <span
-                        className="font-['General_Sans',sans-serif] text-[16px] sm:text-[20px] lg:text-[24px] font-light tracking-tight leading-tight"
+                        className="font-['General_Sans',sans-serif] text-[15px] xs:text-[17px] sm:text-[20px] lg:text-[24px] font-light tracking-tight leading-tight"
                         style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
                       >
                         {step.name}
                       </span>
                       <span
-                        className={`text-[12px] sm:text-[14px] lg:text-[15px] font-normal tracking-wide mt-1 transition-colors ${
+                        className={`text-[11.5px] xs:text-[12.5px] sm:text-[14px] lg:text-[15px] font-normal tracking-wide mt-0.5 sm:mt-1 transition-colors ${
                           isActive ? 'text-[#0088c6]' : 'text-slate-500'
                         }`}
                         style={{ fontFamily: "'General Sans', sans-serif" }}
@@ -162,7 +162,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
 
           {/* MAIN CARD CONTAINER (GRAY & WHITE GRADIENT LIGHT CARD WITH HIGH-CONTRAST MOCKUP & CLEAN COPY) */}
           <div
-            className="relative rounded-[24px] sm:rounded-[30px] lg:rounded-[36px] p-5 sm:p-7 lg:p-9 text-slate-900 overflow-hidden shadow-[0_25px_60px_-15px_rgba(4,22,36,0.08)] border border-[#cbcbcb]"
+            className="relative rounded-[20px] sm:rounded-[30px] lg:rounded-[36px] p-4 sm:p-7 lg:p-9 text-slate-900 overflow-hidden shadow-[0_25px_60px_-15px_rgba(4,22,36,0.08)] border border-[#cbcbcb]"
             style={{
               background: 'linear-gradient(180deg, #ffffff 0%, #f8fafc 40%, #e8edf3 100%)',
             }}
@@ -177,7 +177,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
                 {/* Large Title with Name and Designation */}
                 <div className="mb-4">
                   <h3
-                    className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[32px] font-light text-slate-950 tracking-tight leading-[1.15]"
+                    className="font-['General_Sans',sans-serif] text-xl sm:text-3xl lg:text-[32px] font-light text-slate-950 tracking-tight leading-[1.15]"
                     style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
                   >
                     {current.name}
@@ -189,7 +189,7 @@ export const ProcessSection: React.FC<ProcessSectionProps> = ({ onOpenBooking })
 
                 {/* Clean Narrative Description Paragraph in General Sans */}
                 <p
-                  className="text-[16px] sm:text-[17px] text-slate-600 font-light leading-relaxed mb-8 max-w-lg"
+                  className="text-[14.5px] sm:text-[16px] lg:text-[17px] text-slate-600 font-light leading-relaxed mb-6 sm:mb-8 max-w-lg"
                   style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
                 >
                   {current.description}

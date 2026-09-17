@@ -110,7 +110,7 @@ export const ToolsSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-14">
           <h2
             className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-slate-900 tracking-tight leading-[1.2]"
-            style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300 }}
+            style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
           >
             Crafting Excellence With{' '}
             <span
@@ -228,14 +228,14 @@ export const ToolsSection: React.FC = () => {
           <div className="lg:col-span-4 flex justify-center items-center relative order-1 lg:order-2 my-6 lg:my-0 select-none">
             
             {/* Ambient Circular Glow */}
-            <div className="absolute w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-sky-500/15 blur-2xl pointer-events-none animate-pulse" />
+            <div className="absolute w-56 h-56 xs:w-72 xs:h-72 sm:w-80 sm:h-80 rounded-full bg-sky-500/15 blur-2xl pointer-events-none animate-pulse" />
 
             {/* Smooth 3D Pedestal Contact Shadow that breathes with the levitation */}
             <div className="absolute -bottom-4 sm:-bottom-5 left-1/2 -translate-x-1/2 w-[70%] h-8 sm:h-9 bg-black/20 rounded-full blur-md pointer-events-none z-0 animate-pedestal-shadow" />
 
             {/* Central Circular Disc Hub (Image 2) with Background #0A1428 & Smooth Floating Levitation Animation */}
             <div
-              className="relative z-10 w-68 h-68 sm:w-76 sm:h-76 xl:w-80 xl:h-80 rounded-full shadow-[0_20px_50px_rgba(10,20,40,0.45),0_0_35px_rgba(0,136,198,0.2)] border border-slate-700/60 flex flex-col items-center justify-center p-6 text-center transition-all duration-500 hover:scale-[1.03] animate-medallion-float group"
+              className="relative z-10 w-56 h-56 xs:w-64 xs:h-64 sm:w-76 sm:h-76 xl:w-80 xl:h-80 rounded-full shadow-[0_20px_50px_rgba(10,20,40,0.45),0_0_35px_rgba(0,136,198,0.2)] border border-slate-700/60 flex flex-col items-center justify-center p-4 sm:p-6 text-center transition-all duration-500 hover:scale-[1.03] animate-medallion-float group"
               style={{ backgroundColor: '#0A1428' }}
             >
               

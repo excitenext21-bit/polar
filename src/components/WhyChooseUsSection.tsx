@@ -72,7 +72,7 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onOpenBo
             {/* Headline (WHY CHOOSE US eyebrow removed) */}
             <h2
               className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-white tracking-tight leading-[1.2] mb-2.5"
-              style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300, color: '#ffffff' }}
+              style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300, color: '#ffffff' }}
             >
               Why Choose{' '}
               <span className="font-medium">
@@ -164,13 +164,13 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onOpenBo
 
           {/* RIGHT COLUMN: Asymmetrical Neat & Clean Photo Mosaic */}
           <div className="lg:col-span-6 xl:col-span-7 relative">
-            <div className="grid grid-cols-2 gap-4 sm:gap-5 items-center">
+            <div className="grid grid-cols-2 gap-3 sm:gap-5 items-center">
               
               {/* SUB-COLUMN 1 (Left side of collage) */}
-              <div className="space-y-4 sm:space-y-5">
+              <div className="space-y-3 sm:space-y-5">
                 
                 {/* 1. TOP-LEFT IMAGE: Arched top-left corner */}
-                <div className="group relative rounded-tl-[70px] sm:rounded-tl-[90px] rounded-tr-2xl rounded-bl-2xl rounded-br-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-2xl aspect-[4/3] w-full">
+                <div className="group relative rounded-tl-[45px] sm:rounded-tl-[70px] lg:rounded-tl-[90px] rounded-tr-xl sm:rounded-tr-2xl rounded-bl-xl sm:rounded-bl-2xl rounded-br-xl sm:rounded-br-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-2xl aspect-[4/3] w-full">
                   <img
                     src="/assets/why-choose-us-ac.jpg"
                     alt="Pristine modern home cooling comfort with remote climate control"
@@ -179,7 +179,7 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onOpenBo
                 </div>
 
                 {/* 2. BOTTOM-LEFT IMAGE: Arched bottom-left corner */}
-                <div className="group relative rounded-bl-[60px] sm:rounded-bl-[80px] rounded-tl-2xl rounded-tr-2xl rounded-br-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-xl aspect-[4/3] w-full">
+                <div className="group relative rounded-bl-[40px] sm:rounded-bl-[60px] lg:rounded-bl-[80px] rounded-tl-xl sm:rounded-tl-2xl rounded-tr-xl sm:rounded-tr-2xl rounded-br-xl sm:rounded-br-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-xl aspect-[4/3] w-full">
                   <img
                     src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
                     alt="Spotless living space with pure filtered air"
@@ -192,7 +192,7 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsSectionProps> = ({ onOpenBo
               {/* SUB-COLUMN 2 (Right side of collage) */}
               <div>
                 {/* 3. RIGHT IMAGE: Tall portrait card with rounded arched top */}
-                <div className="group relative rounded-t-[70px] sm:rounded-t-[90px] rounded-b-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-2xl h-[340px] sm:h-[420px] lg:h-[460px] w-full">
+                <div className="group relative rounded-t-[50px] sm:rounded-t-[70px] lg:rounded-t-[90px] rounded-b-xl sm:rounded-b-2xl overflow-hidden bg-slate-900 border border-white/15 shadow-2xl h-[260px] sm:h-[360px] lg:h-[460px] w-full">
                   <img
                     src="/assets/why-choose-us-office.png"
                     alt="Modern high-efficiency commercial office workspace with precision climate control"

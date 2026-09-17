@@ -90,7 +90,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           <div className="max-w-4xl">
             <h2
               className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-slate-900 tracking-tight leading-[1.2] mb-3"
-              style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300 }}
+              style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
             >
               Precision Climate Services{' '}
               <span
@@ -167,8 +167,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
 
                 {/* Service Description */}
                 <p
-                  className="text-[18px] text-slate-500 leading-relaxed line-clamp-4 mb-6 font-light"
-                  style={{ fontFamily: "'General Sans', sans-serif", fontSize: '18px', fontWeight: 300 }}
+                  className="text-[14px] sm:text-[15px] lg:text-[16px] text-slate-500 leading-relaxed line-clamp-4 mb-4 sm:mb-6 font-light"
+                  style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
                 >
                   {service.description}
                 </p>

@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenEstimator }) =>
     return () => clearTimeout(timer);
   }, []);
   return (
-    <section id="home" className="relative pt-28 sm:pt-32 lg:pt-32 pb-0 overflow-hidden bg-[#041624] text-white flex flex-col justify-between min-h-screen lg:h-screen min-h-[100dvh] lg:h-[100dvh]">
+    <section id="home" className="relative pt-24 sm:pt-28 lg:pt-32 pb-0 overflow-hidden bg-[#041624] text-white flex flex-col justify-between min-h-screen lg:h-screen min-h-[100dvh] lg:h-[100dvh]">
       {/* Background Video with Gradient Opacity Mask */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
@@ -136,7 +136,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenEstimator }) =>
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-start text-left pb-6 lg:pb-8 flex-1 justify-center">
         {/* Main Display Headline in General Sans 300 with modern word-by-word reveal */}
         <h1
-          className="text-[18px] sm:text-[23px] md:text-[29px] lg:text-[33px] xl:text-[36px] tracking-[-0.02em] leading-[1.22] max-w-5xl text-left drop-shadow-[0_3px_12px_rgba(0,0,0,0.85)] font-light"
+          className="text-[20px] xs:text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[36px] tracking-[-0.02em] leading-[1.26] sm:leading-[1.22] max-w-5xl text-left drop-shadow-[0_3px_12px_rgba(0,0,0,0.85)] font-light"
           style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
         >
           <span className="inline-block font-light" style={{ fontWeight: 300 }}>
@@ -181,12 +181,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenEstimator }) =>
         {/* Sleek square "Know more" button with white border without bg, glossy hover effect, and soft arrow slide */}
         <div className={`mt-8 ${isLoaded ? 'animate-hero-sub-reveal' : 'opacity-0'}`} style={{ animationDelay: '1.30s' }}>
           <a
-            href="#about"
+            href="#about-us"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+              document.getElementById('about-us')?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="group relative inline-flex items-center gap-2.5 px-7 py-3 rounded-none border border-white/80 hover:border-white bg-transparent hover:bg-white/10 text-white font-light text-sm sm:text-base tracking-wider transition-all duration-300 backdrop-blur-xs shadow-sm hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] overflow-hidden cursor-pointer"
+            className="group relative inline-flex items-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 rounded-none border border-white/80 hover:border-white bg-transparent hover:bg-white/10 text-white font-light text-sm sm:text-base tracking-wider transition-all duration-300 backdrop-blur-xs shadow-sm hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] overflow-hidden cursor-pointer"
             style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
           >
             {/* Glossy light sweep on hover */}

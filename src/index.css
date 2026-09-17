@@ -50,6 +50,8 @@
 
 :root, html, body {
   font-family: 'General Sans', 'Google Sans', 'google general sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 h1, h2 {

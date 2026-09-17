@@ -16,7 +16,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Overlapping Photos Collage with Floating Experience Badge as per Reference */}
           <div className="lg:col-span-6 relative pr-0 lg:pr-4">
-            <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none h-[320px] sm:h-[380px] lg:h-[420px]">
+            <div className="relative w-full max-w-[520px] mx-auto lg:max-w-none h-[270px] sm:h-[350px] lg:h-[420px]">
               {/* Top-Left Main Photo: Polar Air Customer Support & Technical Dispatch Specialist */}
               <div className="group absolute top-0 left-0 w-[74%] h-[72%] rounded-[8px] overflow-hidden shadow-lg border border-slate-200/90 bg-slate-100">
                 <img
@@ -27,11 +27,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
               </div>
 
               {/* Floating Experience Badge nestled overlapping the top photo */}
-              <div className="absolute top-4 sm:top-8 left-[56%] sm:left-[54%] z-20 bg-gradient-to-br from-[#0088c6] to-[#006e9f] text-white px-4 sm:px-5 py-3.5 sm:py-4 rounded-2xl sm:rounded-[22px] shadow-xl shadow-[#0088c6]/30 border border-sky-300/30 flex flex-col justify-center items-center text-center backdrop-blur-xs min-w-[125px] sm:min-w-[145px]">
-                <span className="text-2xl sm:text-3xl lg:text-[34px] font-black tracking-tight leading-none text-white block mb-1">
+              <div className="absolute top-3 sm:top-8 left-[48%] sm:left-[54%] z-20 bg-gradient-to-br from-[#0088c6] to-[#006e9f] text-white px-3 sm:px-5 py-2.5 sm:py-4 rounded-xl sm:rounded-[22px] shadow-xl shadow-[#0088c6]/30 border border-sky-300/30 flex flex-col justify-center items-center text-center backdrop-blur-xs min-w-[110px] sm:min-w-[145px]">
+                <span className="text-2xl sm:text-3xl lg:text-[34px] font-black tracking-tight leading-none text-white block mb-0.5 sm:mb-1">
                   {BUSINESS_INFO.experienceYears}+
                 </span>
-                <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-sky-100 leading-tight block">
+                <span className="text-[8.5px] sm:text-[10px] font-bold uppercase tracking-wider text-sky-100 leading-tight block">
                   Years of <br /> Experience
                 </span>
               </div>
@@ -55,7 +55,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenBooking }) => 
             {/* Main Headline with Brand Blue Accent in General Sans 36px (Matching Screenshot) */}
             <h2
               className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-slate-900 tracking-tight leading-[1.2] mb-5"
-              style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300 }}
+              style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
             >
               Your Trusted Partner in{' '}
               <span

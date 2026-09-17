@@ -132,7 +132,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
             {/* Headline with PolarAir Dual Brand Colors (Brand Blue #0088c6 + Brand Green #3bb83b) */}
             <h2
               className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-slate-950 tracking-tight leading-[1.18] mb-4"
-              style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300 }}
+              style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300 }}
             >
               What our clients are saying
             </h2>
@@ -225,13 +225,13 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = () => {
                     <div
                       className={`transition-all duration-500 ease-out ${
                         isEvenSeries
-                          ? '-translate-y-3.5 scale-[1.035] z-20 cursor-pointer'
+                          ? 'sm:-translate-y-3.5 sm:scale-[1.035] z-20 cursor-pointer'
                           : 'translate-y-0 scale-100 z-10 cursor-default'
                       } group`}
                     >
                       {/* 1. Speech Bubble Body (Matching Screenshot) */}
                       <div
-                        className={`bg-white rounded-2xl sm:rounded-[22px] p-6 sm:p-7 border relative transition-all duration-500 ease-out ${
+                        className={`bg-white rounded-2xl sm:rounded-[22px] p-5 sm:p-7 border relative transition-all duration-500 ease-out ${
                           isEvenSeries
                             ? 'border-[#0088c6]/55 shadow-[0_22px_45px_-8px_rgba(0,136,198,0.22),0_12px_24px_-6px_rgba(0,0,0,0.08)] group-hover:-translate-y-2 group-hover:scale-[1.015] group-hover:shadow-[0_28px_52px_-10px_rgba(0,136,198,0.32)] group-hover:border-[#0088c6]'
                             : 'border-slate-200/80 shadow-[0_4px_18px_rgba(0,0,0,0.04)]'

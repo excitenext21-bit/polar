@@ -154,10 +154,10 @@ export const SocialSideDrawer: React.FC = () => {
                 )}
               </a>
 
-              {/* Flyout Hover Tooltip (Slides smoothly to the left) */}
+              {/* Flyout Hover Tooltip (Slides smoothly to the left, desktop only) */}
               <div
                 role="tooltip"
-                className="absolute right-full mr-2.5 top-1/2 -translate-y-1/2 pointer-events-none opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 z-50 shadow-2xl"
+                className="hidden sm:block absolute right-full mr-2.5 top-1/2 -translate-y-1/2 pointer-events-none opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 z-50 shadow-2xl"
               >
                 <div className="bg-[#031320]/95 backdrop-blur-md text-white px-2.5 py-1.5 rounded-xl border border-white/15 shadow-2xl flex items-center gap-2 whitespace-nowrap">
                   <div

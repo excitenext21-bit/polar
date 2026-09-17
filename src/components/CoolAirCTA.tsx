@@ -75,7 +75,7 @@ export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
         />
 
         {/* High-Contrast Gradient Mask: Deep Solid Navy on Left Feathering to Clear on Right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#031320] via-[#031320]/95 via-35% sm:via-42% to-[#031320]/20 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#031320] via-[#031320]/95 via-45% sm:via-42% to-[#031320]/40 sm:to-[#031320]/20 lg:to-transparent" />
         
         {/* Subtle Ambient Brand Glow */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#0088c6]/15 rounded-full blur-[140px]" />
@@ -128,7 +128,7 @@ export const CoolAirCTA: React.FC<CoolAirCTAProps> = ({ onOpenBooking }) => {
           {/* Main Headline with Elegant Word-by-Word Staggered Reveal */}
           <h2
             className="font-['General_Sans',sans-serif] text-2xl sm:text-3xl lg:text-[36px] font-light text-white tracking-tight leading-[1.2] mb-3 text-balance"
-            style={{ fontFamily: "'General Sans', sans-serif", fontSize: '36px', fontWeight: 300, color: '#ffffff' }}
+            style={{ fontFamily: "'General Sans', sans-serif", fontWeight: 300, color: '#ffffff' }}
           >
             {HEADLINE_WORDS.map((word, index) => (
               <span
